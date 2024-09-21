@@ -23,7 +23,7 @@ def input_letter() -> str:
 
 def contains_char(word: str, letter: str) -> None:
     """Searches for the letter at each index of the word"""
-    print("Searching for " + letter + "in " + word)
+    print("Searching for " + letter + " in " + word)  # Had to add an extra space
     # Originally had the below as "elif" statements after the first "if", but realized
     # that wasn't going to work because I needed it to go through every index.
     count = 0
@@ -53,7 +53,7 @@ def contains_char(word: str, letter: str) -> None:
         print(str(count) + " instances of " + letter + " found in " + word)
 
 
-def main():
+def main() -> None:  # Added "None"
     contains_char(word=input_word(), letter=input_letter())
 
 
