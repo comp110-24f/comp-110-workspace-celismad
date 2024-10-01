@@ -16,10 +16,10 @@ def input_guess(secret_word_len: int) -> str:
         # If the word is the wrong length, loops asking for a new word till it is 5
         # chars.
         while i == 0:
-            guess: str = input(f"That wasn't {secret_word_len} chars! Try again: ")
+            guess = input(f"That wasn't {secret_word_len} chars! Try again: ")
             if len(guess) == secret_word_len:
                 i += 1
-                return guess
+        return guess  # Moved return to here so function returned on all pathways
 
 
 def contains_char(searched_through: str, searched_for: str) -> bool:
